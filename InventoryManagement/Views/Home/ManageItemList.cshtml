@@ -1,0 +1,366 @@
+﻿
+@{
+    ViewBag.Title = "ManageItemList";
+}
+
+<div class="wrapper">
+
+<header class="main-header">
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>A</b>LT</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>INVENTORY</b>SYSTEM</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="~/Content/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <span class="hidden-xs">Alexander Pierce</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="~/Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                            <p>
+                                Alexander Pierce - Web Developer
+                                <small>Member since Nov. 2012</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+
+                            <!-- /.row -->
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="active treeview">
+                <a href="index.html">
+                    <i class="fa fa-home"></i> <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- Customer Section -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Customers</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/AddCustomer.html"><i class="fa fa-plus"></i> Add Customer</a></li>
+                    <li><a href="~/pages/forms/ManageCustomer.html"><i class="fa fa-plus"></i> Manage Customers</a></li>
+                </ul>
+            </li>
+            <!-- Suppliers Section -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-truck"></i>
+                    <span>Suppliers</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/AddSuppliers.html"><i class="fa fa fa-plus"></i> Add Suppliers</a></li>
+                    <li><a href="~/pages/forms/ManageSuppliers.html"><i class="fa fa fa-plus"></i> Manage Suppliers</a></li>
+                </ul>
+            </li>
+            <!-- Employers Section -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Employees</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Employees</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Employees</a></li>
+                </ul>
+            </li>
+            <!-- Item Section-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Manage Items</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add New Item</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Items</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Items List</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Categories</a></li>
+                </ul>
+            </li>
+            <!-- Purchase Section-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-archive"></i>
+                    <span>Manage Purchase</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Purchase</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Purchases</a></li>
+                </ul>
+            </li>
+            <!-- Purchase Section-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-bell-o"></i>
+                    <span>Manage Order</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Order</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Orders</a></li>
+                </ul>
+            </li>
+            <!-- Sales Section-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dollar"></i>
+                    <span>Manage Sale</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Sale</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Sales</a></li>
+                </ul>
+            </li>
+            <!-- Repport Section-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-bar-chart-o"></i>
+                    <span>Reports</span>
+                    <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Sales Report</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> POS Reports</a></li>
+                    <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Return Report</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <span class="fa fa-th list"></span>&nbsp;ITEM LIST           
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Manage Item</a></li>
+            <li class="active">Items List</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <div class="panel panel-default">
+        <div class="panel-body text-center">            
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row">
+                            <div class="col-sm-6 text-left">
+                                <div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example1"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 181px; text-align: center">Item Image</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 224px; text-align: center"">Item Name</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 224px; text-align: center" ">Item Category</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 197px; text-align: center"">Price</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 154px; text-align: center"">Quantity</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 112px; text-align: center"">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                        </td>
+                                        <td>2</td>
+                                        <td data-title="Action">
+                                            <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                            <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                        </td>
+                                        <td>2</td>
+                                        <td data-title="Action">
+                                            <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                            <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                        </td>
+                                        <td>2</td>
+                                        <td data-title="Action">
+                                            <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                            <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                        </td>
+                                        <td>2</td>
+                                        <td data-title="Action">
+                                            <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                            <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                        </td>
+                                        <td>
+                                            <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                        </td>
+                                        <td>2</td>
+                                        <td data-title="Action">
+                                            <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                            <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                            <td class="sorting_1"><img src="http://placehold.it/100x100"></td>
+                                            <td>
+                                                <span class="scheme_color fw_medium f_size_large">Mobile</span>
+                                            </td>
+                                            <td>
+                                                <span class="scheme_color fw_medium f_size_large">Electorics</span>
+                                            </td>
+                                            <td>
+                                                <span class="scheme_color fw_medium f_size_large">$102.00</span>
+                                            </td>
+                                            <td>2</td>
+                                            <td data-title="Action">
+                                                <button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_10">Add to Cart</button><br>
+                                                <a href="#" class="color_dark"><i class="fa fa-times m_right_5"></i> Remove</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="dataTables_paginate paging_simple_numbers text-right" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+   
+
+</div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Design & Development by</b> <a href="http://mazedur.com">Mazed</a>
+        </div>
+        <strong>Copyright &copy; 2017</strong> All rights
+        reserved.
+    </footer>
+
+</div>

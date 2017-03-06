@@ -1,0 +1,351 @@
+﻿
+@{
+    ViewBag.Title = "Category";
+}
+<div class="wrapper">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>INVENTORY</b>SYSTEM</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="~/Content/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Alexander Pierce</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="~/Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            @*<ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>*@
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="active treeview">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <!-- Customer Section -->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span>Customers</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("Customer","Home")"><i class="fa fa-plus"></i> Add Customer</a></li>
+                        <li><a href="@Url.Action("ManageCustomer","Home")"><i class="fa fa-plus"></i> Manage Customer</a></li>
+                        @*<li><a href="~/pages/forms/AddCustomer.html"><i class="fa fa-plus"></i> Add Customer</a></li>
+                          <li><a href="~/pages/forms/ManageCustomer.html"><i class="fa fa-plus"></i> Manage Customers</a></li>*@
+                    </ul>
+                </li>
+                <!-- Suppliers Section -->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-truck"></i>
+                        <span>Suppliers</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("Supplier", "Home")"><i class="fa fa-plus"></i> Add Suppliers</a></li>
+                        <li><a href="@Url.Action("Supplier","Home")"><i class="fa fa-plus"></i> Manage Suppliers</a></li>
+                        @*<li><a href="~/pages/forms/AddSuppliers.html"><i class="fa fa fa-plus"></i> Add Suppliers</a></li>
+                        <li><a href="~/pages/forms/ManageSuppliers.html"><i class="fa fa fa-plus"></i> Manage Suppliers</a></li>*@
+                    </ul>
+                </li>
+                <!-- Employers Section -->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span>Employees</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("Employee", "Home")"><i class="fa fa-plus"></i> Add Employees</a></li>
+                        <li><a href="@Url.Action("Employee", "Home")"><i class="fa fa-plus"></i> Manage Employees</a></li>
+                        @*<li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Employees</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Employees</a></li>*@
+                    </ul>
+                </li>
+                <!-- Item Section-->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Manage Items</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="@Url.Action("Item", "Home")"><i class="fa fa-plus"></i> Add New Item</a></li>
+                        <li><a href="@Url.Action("ManageItem", "Home")"><i class="fa fa-plus"></i> Manage Items</a></li>
+                        <li><a href="@Url.Action("ManageItemList", "Home")"><i class="fa fa-plus"></i> Items List</a></li>
+                        <li><a href="@Url.Action("Category", "Home")"><i class="fa fa-plus"></i> Categories</a></li>
+                        @*<li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add New Item</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Items</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Items List</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Categories</a></li>*@
+                    </ul>
+                </li>
+                <!-- Purchase Section-->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-archive"></i>
+                        <span>Manage Purchase</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Purchase</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Purchases</a></li>
+                    </ul>
+                </li>
+                <!-- Purchase Section-->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-bell-o"></i>
+                        <span>Manage Order</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Order</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Orders</a></li>
+                    </ul>
+                </li>
+                <!-- Sales Section-->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-dollar"></i>
+                        <span>Manage Sale</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Add Sale</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Manage Sales</a></li>
+                    </ul>
+                </li>
+                <!-- Repport Section-->
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span>Reports</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Sales Report</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> POS Reports</a></li>
+                        <li><a href="~/pages/forms/general.html"><i class="fa fa fa-plus"></i> Return Report</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                <span class="fa fa-th list"></span>&nbsp;Manage Category
+                <small>Preview</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">Manage Item</a></li>
+                <li class="active">Category</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="box box-primary">
+                        <div class="box-header with-border text-center">
+                            <h3 class="box-title"><span id="ContentPlaceHolder1_Label8" class="label label-warning" style="font-size: 13px;">Add New Category</span></h3> 
+                            || <b>User List</b> ||
+                            <h3 class="box-title"><span id="ContentPlaceHolder1_Label8" class="label label-success" style="font-size: 13px;">Add New Task</span></h3>                            
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- Panels start -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center">
+                                <h3><span class="fa fa-list"></span>&nbsp;Employees List</h3>
+                            </div>
+                            <div class="panel-body text-center">                                
+                                <div id="ContentPlaceHolder1_Panel1">                                    
+                                    <div class="row">
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> Sales</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> IT</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> HR</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> Marketing</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> Accounts</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/320x250" alt="" kasperskylab_antibanner="on">
+                                                <div class="caption text-center">
+                                                    <h3>John Doe</h3>
+                                                    <p><b>Department :</b> Admin</p>
+                                                    <p><b>Email :</b> John@gmail.com</p>
+                                                    <p><b>Contact No :</b> 019182762</p>
+                                                    <a id="ContentPlaceHolder1_grdItemList_LinkEdit_38" title="Edit" class="fa fa-edit" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$LinkEdit','')" style="color: Red; font-size: 15px;"></a> ||
+                                                    <a id="ContentPlaceHolder1_grdItemList_btnDelete_38" title="Delete" class="fa fa-times" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$grdItemList$ctl40$btnDelete','')" style="color: Red; font-size: 15px;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Design & Development by</b> <a href="http://mazedur.com">Mazed</a>
+        </div>
+        <strong>Copyright &copy; 2017</strong> All rights
+        reserved.
+    </footer>
+
+
+</div>
+
+
+
+
